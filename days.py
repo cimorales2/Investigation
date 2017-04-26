@@ -1,4 +1,4 @@
-import numpy as np
+qimport numpy as np
 import os
 
 path = os.getcwd()
