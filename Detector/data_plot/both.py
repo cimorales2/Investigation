@@ -1,29 +1,50 @@
+import serial,time
 import matplotlib.pyplot as plt
 import numpy as np
 
-f = open("both_scent.data",'r')
-f = f.read().strip('\n')
-data = f.split('\n')
-for i in range(len(data)):
-    data[i]=data[i].split(" ")
+arduino = serial.Serial('/dev/ttyACM0',115200)
+time.sleep(2) #wait for serial to be ready
 
-n1 = data[0][0]
-n2 = data[1][0]
+def lim_time(limit): #seg
+    t0 = time.clock()
+    if (time.clock() - t0)<limit: return True
+    else: return False
 
-print n1,n2
 
-del data[0]
-del data[0]
+g1 = np.empty((0))
+g2 = np.empty((0))
+n = True
 
-seconds = [float(i) for i in zip(*data)[0]]
-volts1 = [float(i) for i in zip(*data)[1]]
-volts2 = [float(i) for i in zip(*data)[2]]
+t = 60
+print "Time setted for " + str(t) +" s"
+print "Please wait..."
 
-seconds = np.array(seconds)
-volts1 = np.array(volts1)
-volts2 = np.array(volts2)
+coin = 0
+while lim_time(t):
+    data = arduino.readline()
+    if data != '\n':
+        data = data.strip('\n').split(" ")
+        g1 = np.append(g1,int(data[0]))
+        g2 = np.append(g2,int(data[1]))
 
-plt.plot(seconds,volts1*(3.3/4095),label=n1)
-plt.plot(seconds,volts2*(3.3/4095),label=n2)
+arduino.close()
+print "Done!"
+
+m1 = g1.mean()
+m2 = g2.mean()
+s1 = g1.std()
+s2 = g2.std()
+
+for i in range(g1.size):
+    if g1[i] >= m1+3*s1 and g2[i]>=m2+3*s2:
+        coin +=1
+
+print "Ground for:\nCH1 = {0}\nCH2 = {1}\nTotal of Coincidences = {2}".format(m1,m2,coin)
+
+
+'''
+plt.plot(np.arange(1,len(volts1)+1,1),volts1,'.-',label="a0")
+plt.plot(np.arange(1,len(volts1)+1,1),volts2,'.-',label="a1")
 plt.legend()
 plt.show()
+'''
