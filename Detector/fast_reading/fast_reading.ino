@@ -4,7 +4,7 @@ int ms;
 
 
 void setup() {
-  SerialUSB.begin(115200);
+  Serial.begin(115200);
 
  ADC->ADC_MR |= 0x80; // these lines set free running mode on adc 7 and adc 6 (pin A0 and A1 - see Due Pinout Diagram thread)
  ADC->ADC_CR=2;
@@ -26,7 +26,7 @@ void loop() {
  //Serial.print('#');Serial.println(millis());
  //t=micros()-t;
  for(int i=0;i<5000;i++){
-    SerialUSB.print(data[2*i]);SerialUSB.print(" "); SerialUSB.print(data[2*i+1]);SerialUSB.print('\n');
+    Serial.print(data[2*i]);Serial.print(" "); Serial.print(data[2*i+1]);Serial.print('\n');
  }
 //Serial.write( (uint8_t*)data,sizeof(data));
 }
