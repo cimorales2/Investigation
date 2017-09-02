@@ -1,7 +1,7 @@
 int t0,t1,t2,t3;
 uint32_t status;
 uint32_t coin;
-boolean statusPin44, statusPin46;
+boolean statusPin44, statusPin46, statusPin48;
 
 void setup() {
   Serial.begin(115200);
@@ -17,443 +17,560 @@ void setup() {
 void loop() {
   t0= millis();
   while (millis()-t0<10000) {
+    //t0 = micros();
     status = PIOC->PIO_PDSR;
+    //t1=micros();
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
+    //t2=micros();
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
     status = PIOC->PIO_PDSR;
     statusPin44 = status & (1 << 19);
     statusPin46 = status & (1 << 17);
-    if (statusPin44&statusPin46) {coin++;}
-                    
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
+    status = PIOC->PIO_PDSR;
+    statusPin44 = status & (1 << 19);
+    statusPin46 = status & (1 << 17);
+    statusPin48 = status & (1 << 13);
+    if (statusPin44&statusPin46&statusPin48) {coin++;}
+   
   }
 
   Serial.println(coin);
